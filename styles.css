@@ -292,13 +292,16 @@ p {
     }
 }
 
-
-
+/* Estilização da seção de competências */
 .competencias {
     max-width: 85%;
-    margin: 140px auto;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
+/* Estilo dos blocos de competência */
 .competencia {
     display: flex;
     align-items: center;
@@ -307,14 +310,15 @@ p {
     padding: 40px;
     border-radius: 15px;
     box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.15);
-    margin-bottom: 40px;
     transition: all 0.3s ease-in-out;
 }
 
+/* Quando passar o mouse */
 .competencia:hover {
     transform: translateY(-5px);
 }
 
+/* Texto da competência */
 .competencia-texto {
     flex: 1;
     text-align: left;
@@ -332,52 +336,48 @@ p {
     color: #555;
 }
 
+/* Imagem da competência */
 .competencia-imagem {
     flex: 1;
     display: flex;
     justify-content: center;
-    position: relative;
+    align-items: center;
 }
 
 .competencia-imagem img {
     width: 100%;
-    max-width: 350px;
+    max-width: 300px;
     border-radius: 15px;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
     transition: all 0.3s ease-in-out;
 }
 
-.competencia-imagem img:hover {
-    transform: scale(1.05);
+/* Ajustes para mobile */
+@media (max-width: 768px) {
+    .competencia {
+        flex-direction: column; /* Coloca o texto acima e a imagem abaixo */
+        text-align: center;
+        padding: 30px;
+        gap: 20px;
+    }
+
+    .competencia-texto {
+        text-align: center;
+    }
+
+    .competencia-texto h2 {
+        font-size: 24px;
+    }
+
+    .competencia-texto p {
+        font-size: 16px;
+    }
+
+    .competencia-imagem img {
+        max-width: 80%; /* Reduz a imagem para telas menores */
+    }
 }
 
-.slider-container {
-    position: relative;
-    max-width: 350px;
-}
-
-.slider-container img {
-    display: none;
-}
-
-.slider-container img.active {
-    display: block;
-}
-
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.prev { left: 10px; }
-.next { right: 10px; }
 
 
 .outros {

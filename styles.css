@@ -292,16 +292,12 @@ p {
     }
 }
 
-/* Estilização da seção de competências */
 .competencias {
     max-width: 85%;
-    margin: 100px auto;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+    margin: 140px auto;
 }
 
-/* Estilo dos blocos de competência */
+/* Estilização de cada bloco de competência */
 .competencia {
     display: flex;
     align-items: center;
@@ -310,15 +306,16 @@ p {
     padding: 40px;
     border-radius: 15px;
     box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.15);
+    margin-bottom: 40px;
     transition: all 0.3s ease-in-out;
 }
 
-/* Quando passar o mouse */
+/* Efeito ao passar o mouse */
 .competencia:hover {
     transform: translateY(-5px);
 }
 
-/* Texto da competência */
+/* Área do texto */
 .competencia-texto {
     flex: 1;
     text-align: left;
@@ -336,26 +333,31 @@ p {
     color: #555;
 }
 
-/* Imagem da competência */
+/* Área da imagem */
 .competencia-imagem {
     flex: 1;
     display: flex;
     justify-content: center;
-    align-items: center;
+    position: relative;
 }
 
 .competencia-imagem img {
     width: 100%;
-    max-width: 300px;
+    max-width: 350px;
     border-radius: 15px;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
     transition: all 0.3s ease-in-out;
 }
 
-/* Ajustes para mobile */
+/* Efeito ao passar o mouse */
+.competencia-imagem img:hover {
+    transform: scale(1.05);
+}
+
+/* Ajuste para Mobile */
 @media (max-width: 768px) {
     .competencia {
-        flex-direction: column; /* Coloca o texto acima e a imagem abaixo */
+        flex-direction: column; /* Empilha os elementos */
         text-align: center;
         padding: 30px;
         gap: 20px;
@@ -374,10 +376,39 @@ p {
     }
 
     .competencia-imagem img {
-        max-width: 80%; /* Reduz a imagem para telas menores */
+        max-width: 80%; /* Reduz a imagem no mobile */
     }
 }
 
+/* Slider de Imagens */
+.slider-container {
+    position: relative;
+    max-width: 350px;
+}
+
+.slider-container img {
+    display: none;
+}
+
+.slider-container img.active {
+    display: block;
+}
+
+/* Botões do Slider */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
 
 
 .outros {

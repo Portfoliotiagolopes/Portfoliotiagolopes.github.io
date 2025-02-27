@@ -56,7 +56,14 @@ nav {
     right: 20px; /* Alinha o botão à direita */
     top: 50%;
     transform: translateY(-50%);
-    color: black;
+    color: #000; /* Define a cor preta */
+}
+
+/* Remove o efeito azul que pode estar vindo do foco */
+.menu-toggle:focus,
+.menu-toggle:hover {
+    outline: none;
+    color: #000; /* Garante que ao passar o mouse, continua preto */
 }
 
 .logo:hover {

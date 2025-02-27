@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Competências</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Portfólio</div>
+            <button class="menu-toggle" aria-label="Abrir menu" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre Mim</a></li>
+                <li><a href="competencias.html">Competências</a></li>
+                <li><a href="estagio.html">Estágio</a></li>
+                <li><a href="outros.html">Outros</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="competencias">
+        <div class="competencia">
+            <div class="competencia-texto">
+                <h2>Edição de Vídeo</h2>
+                <p>Neste curso sempre aprendemos desde o início a trabalhar com Edição de Vídeo em programas profissionais com o Adobe Premiere.</p>
+            </div>
+            <div class="competencia-imagem">
+                <img src="imagens/edicaovideo.jpg" alt="Edição de Vídeo">
+            </div>
+        </div>
+
+        <div class="competencia">
+            <div class="competencia-texto">
+                <h2>Edição 2D | 3D</h2>
+                <p><strong>Edição 2D:</strong> Durante o 11.º ano aprendemos bastante sobre Animação 2D em programas como o Adobe Animate.</p>
+                <p><strong>Edição 3D:</strong> Agora durante o 12.º ano estamos a aprender Animação 3D e Modelagem 3D no Blender.</p>
+            </div>
+            <div class="competencia-imagem">
+                <img src="imagens/imagem_3D.jpg" alt="Edição 2D e 3D">
+            </div>
+        </div>
+
+        <div class="competencia">
+            <div class="competencia-texto">
+                <h2>Design Gráfico</h2>
+                <p>Ao longo deste curso, aprendi bastante sobre Design Gráfico, aprofundando diversas técnicas que me permitiram melhorar significativamente os meus trabalhos.</p>
+                <p>Desenvolvi um domínio avançado em Photoshop e Illustrator, o que me possibilita criar edições profissionais, desde manipulação de imagens até ilustrações vetoriais. Estas competências foram essenciais para aperfeiçoar a minha criatividade e elevar a qualidade dos meus projetos visuais.</p>
+            </div>
+            <div class="competencia-imagem slider-container">
+                <img src="Trabalhos de escola/Ilustração Orquídeas.jpg" alt="Design Gráfico" class="active">
+                <img src="Trabalhos de escola/12N 19 - INÍCIO ANO LETIVO.jpg" alt="Design Gráfico">
+                <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+                <button class="next" onclick="changeImage(1)">&#10095;</button>
+            </div>
+        </div>
+
+        <div class="competencia">
+            <div class="competencia-texto">
+                <h2>Web Design</h2>
+                <p>O meu primeiro contacto com o Web Design foi no 10.º ano através de fichas de trabalho.</p>
+                <p>Agora, neste último ano, com a realização da Prova de Aptidão Profissional, foi-nos concedida a utilização da competência de Web Design para a produção da Prova Final.</p>
+            </div>
+            <div class="competencia-imagem">
+                <img src="imagens/WebDesign.jpg" alt="Web Design">
+            </div>
+        </div>
+
+        <div class="competencia">
+            <div class="competencia-texto">
+                <h2>Programação</h2>
+                <p>No 10º ano, tive a oportunidade de aprender HTML através de fichas e trabalhos realizados na escola, o que me deu uma base sólida para a estruturação de Páginas Web. No entanto, senti a necessidade de expandir os meus conhecimentos e, por isso, decidi aprender JavaScript por iniciativa própria, fora do ambiente escolar.</p>
+                <p>Este conhecimento foi essencial para aprofundar a minha compreensão do desenvolvimento web e permitiu-me adicionar funcionalidades dinâmicas e interativas aos meus projetos. Graças a isso, consegui aplicar esses conhecimentos na criação deste portfólio.</p>
+            </div>
+            <div class="competencia-imagem">
+                <img src="imagens/programacao.png" alt="Web Design">
+            </div>
+        </div>
+    </section>
+</body>
+
+<script>
+    function changeImage(direction) {
+        let images = document.querySelectorAll('.slider-container img');
+        let activeIndex = Array.from(images).findIndex(img => img.classList.contains('active'));
+        images[activeIndex].classList.remove('active');
+        let newIndex = (activeIndex + direction + images.length) % images.length;
+        images[newIndex].classList.add('active');
+    }
+
+    function toggleMenu() {
+        document.querySelector('.nav-links').classList.toggle('active');
+    }
+</script>
+
+</html>

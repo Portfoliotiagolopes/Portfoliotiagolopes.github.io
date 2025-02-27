@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outros</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Portfólio</div>
+            <button class="menu-toggle" aria-label="Abrir menu" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre Mim</a></li>
+                <li><a href="competencias.html">Competências</a></li>
+                <li><a href="estagio.html">Estágio</a></li>
+                <li><a href="outros.html">Outros</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="outros">
+        <div class="outros-container">
+            <h1>Outros</h1>
+            <p>Atualmente, estou a frequentar um curso de Inglês no <strong>Wall Street English</strong> na Póvoa de Varzim, onde estou a aperfeiçoar as minhas competências linguísticas para comunicar de forma mais eficaz em diferentes contextos.</p>
+            <p>Durante o verão, trabalhei para a <strong>We Out There</strong>, uma marca de roupa da Póvoa de Varzim. Esta experiência permitiu-me desenvolver ainda mais as minhas competências em Edição de Vídeo e Design Gráfico, trabalhando diretamente na criação de conteúdos visuais para a marca.</p>
+            <p>Durante os meus tempos livres gosto de ouvir música e passear com os meus amigos.</p>
+        </div>
+    </section>
+</body>
+<script>
+    function toggleMenu() {
+        document.querySelector('.nav-links').classList.toggle('active');
+    }
+</script>
+</html>

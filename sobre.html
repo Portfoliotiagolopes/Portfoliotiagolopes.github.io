@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Mim</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Portfólio</div>
+            <button class="menu-toggle" aria-label="Abrir menu" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre Mim</a></li>
+                <li><a href="competencias.html">Competências</a></li>
+                <li><a href="estagio.html">Estágio</a></li>
+                <li><a href="outros.html">Outros</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="sobre-mim">
+        <div class="texto">
+            <h1>Sobre Mim</h1>
+            <p>Desde sempre tive interesse pelo mundo digital e pela criatividade, e este Curso tem-me permitido desenvolver competências essenciais na área da Multimédia, como Design Gráfico, Edição de Vídeo, Fotografia e Animação.</p>
+            <p>Além dos estudos, gosto de manter um estilo de vida ativo. Pratico exercício físico regularmente no ginásio e tenho grande interesse por desporto, pois acredito que o bem-estar físico está diretamente ligado ao desempenho escolar e profissional.</p>
+            <p>No futuro, pretendo continuar os meus estudos na universidade e seguir a área do marketing.</p>
+        </div>
+        <div class="imagem">
+            <img src="imagens/foto_sobremim.jpg" alt="Imagem de apresentação">
+        </div>
+    </section>
+</body>
+<script>
+    function toggleMenu() {
+        document.querySelector('.nav-links').classList.toggle('active');
+    }
+</script>
+</html>
